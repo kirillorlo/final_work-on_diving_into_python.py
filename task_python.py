@@ -123,5 +123,31 @@
 
 # for i in range(stars_row):
 #     print((stars_row - i) * ' ' + ((2 * i) + 1) * '*')
-for i in range(5):
-    print(i)
+# for i in range(5):
+#     print(i)
+
+# data = input('Enter info: ')
+# a = data
+# print(type(data))
+# print(id(data))
+# print(hash(a))
+# a = 'sss'
+# print(hash(a))
+# num = 255
+# a = hex(num)
+# b = a[2:]
+# res = b.upper()
+# if num == 0:
+#     print('Шестнадцатеричное представление числа: ')
+#     print('Проверка результата: 0x0')
+# else:
+#     print(f'Шестнадцатеричное представление числа: {res}')
+#     print(f'Проверка результата: {a}')
+import fractions
+task_lection = input('Enter text: ')
+
+print(task_lection.isalnum())
+f1 = fractions.Fraction(1, 3)
+print(f1)
+
+
