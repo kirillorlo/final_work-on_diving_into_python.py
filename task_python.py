@@ -143,11 +143,4 @@
 # else:
 #     print(f'Шестнадцатеричное представление числа: {res}')
 #     print(f'Проверка результата: {a}')
-import fractions
-task_lection = input('Enter text: ')
-
-print(task_lection.isalnum())
-f1 = fractions.Fraction(1, 3)
-print(f1)
-
 
