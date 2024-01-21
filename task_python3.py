@@ -30,7 +30,7 @@
 # words_count = {}
 """
     здесь пробуем комментить свой код
-    функции незнакомы мне, но все работает)))
+    функции незнакомы мне, но все работает))
 """
 # for word in words:
 #     if word not in words_count:
@@ -38,10 +38,10 @@
 #     else:
 #         words_count[word] += 1
 
-#print(words_count)
+# print(words_count)
 
-#top_words = sorted(words_count.items(), key=lambda x: x[1], reverse=True)[:10]
-#print(top_words)
+# top_words = sorted(words_count.items(), key=lambda x: x[1], reverse=True)[:10]
+# print(top_words)
 
 # tsk 3
 
@@ -52,3 +52,13 @@
 #         numbers.append(i)
 # numbers = sorted(numbers)
 # print(numbers)
+
+enter_number = '5.12'
+
+if enter_number.isdigit():
+    print('int')
+elif ('.' in enter_number and enter_number.replace('-', '', 1).replace('.', '', 1).isdigit()
+    and '-' not in enter_number[1:]):
+    print('float')
+#('.' in enter_number and enter_number.replace('-', '', 1).replace('.', '', 1).isdigit()
+#    and '-' not in enter_number[1:])
