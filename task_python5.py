@@ -51,14 +51,57 @@
 # должна выводить слово «FizzBuzz».
 # ✔️ *Превратите решение в генераторное выражение.
 
-for i in range(101):
-    if i % 15 == 0:
-        print('FizzBuzz')
-    elif i % 3 == 0:
-        print('Fizz')
-    elif i % 5 == 0:
-        print('Buzz')
-    else:
-        print(i)
+# for i in range(101):
+#     if i % 15 == 0:
+#         print('FizzBuzz')
+#     elif i % 3 == 0:
+#         print('Fizz')
+#     elif i % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(i)
+
+# print(*['FizzBuzz' if i % 15 == 0
+#     else 'Fizz' if i % 3 == 0
+#     else 'Buzz' if i % 5 == 0
+#     else i for i in range(101)], sep='\n')
+
+# Создайте функцию-генератор. Функция генерирует N простых чисел, начиная с числа 2. Для проверки числа на простоту используйте правило: “число является простым, если делится нацело только на единицу и на себя”.
+# Создайте функцию-генератор. Функция генерирует N простых чисел, начиная с числа 2.
+#Для проверки числа на простоту используйте правило: “число является простым,
+# если делится нацело только на единицу и на себя”.
+
+# def is_simple(n:int) -> bool:
+#     for i in range(2, int(n**0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+
+# def simple_generate(number: int):
+#     i = 2
+#     yield i
+#     i += 1
+#     while i <= number:
+#         if is_simple(i):
+#             yield i
+#         i += 2
+
+# a = simple_generate(27)
+# for _ in range(27):
+#     print(next(a), end=' ')
 
 
+# Напишите функцию get_file_info, которая принимает на вход строку - абсолютный путь до файла.
+# Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
+# file_path = "C:/Users/User/Documents/example.txt")
+
+def get_file_info(file_path):
+    file_name = file_path.split("/")[-1]
+    print(file_name)
+    file_extension = file_name.split(".")[-1]
+    print(file_extension)
+    path = file_path[:-len(file_name)]
+    print(path)
+    return (path, file_name[:-len(file_extension)-1], "." + file_extension)
+
+print(get_file_info(file_path = "C:/Users/User/Documents/example.txt"))
