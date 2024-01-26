@@ -95,13 +95,31 @@
 # Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
 # file_path = "C:/Users/User/Documents/example.txt")
 
-def get_file_info(file_path):
-    file_name = file_path.split("/")[-1]
-    print(file_name)
-    file_extension = file_name.split(".")[-1]
-    print(file_extension)
-    path = file_path[:-len(file_name)]
-    print(path)
-    return (path, file_name[:-len(file_extension)-1], "." + file_extension)
+# def get_file_info(file_path):
+#     file_name = file_path.split("/")[-1]
+#     print(file_name)
+#     file_extension = file_name.split(".")[-1]
+#     print(file_extension)
+#     path = file_path[:-len(file_name)]
+#     print(path)
+#     print(-len(file_name))
+#     return (path, file_name[:-len(file_extension)-1], "." + file_extension)
 
-print(get_file_info(file_path = "C:/Users/User/Documents/example.txt"))
+# print(get_file_info(file_path = "C:/Users/User/Documents/example.txt"))
+# a = 'qwerty'
+# b = a.split('e')[-1]
+# print(b)
+# print(a[:-len(b)])
+
+# задача по Фибоначчи
+
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+f = fibonacci()
+
+for i in range(10):
+    print(next(f))
