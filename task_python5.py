@@ -113,13 +113,28 @@
 
 # задача по Фибоначчи
 
-def fibonacci():
-    a, b = 0, 1
-    while True:
-        yield a
-        a, b = b, a + b
+# def fibonacci():
+#     a, b = 0, 1
+#     while True:
+#         yield a
+#         a, b = b, a + b
 
-f = fibonacci()
+# f = fibonacci()
 
-for i in range(10):
-    print(next(f))
+# for i in range(10):
+#     print(next(f))
+
+names = ["Alice", "Bob", "Charlie"]
+salary = [5000, 6000, 7000]
+bonus = ["10%", "5%", "15%"]
+result = {}
+#result = {name: round(s * float(b.strip('%')) / 100, 2) for name, s, b in zip(names, salary, bonus)}
+for name, s, b in zip(names, salary, bonus):
+    bonus_percentage = float(b.strip('%')) / 100
+    result[name] = round(s * bonus_percentage, 2)
+print(result)
+
+
+
+
+# {'Alice': 500.0, 'Bob': 300.0, 'Charlie': 1050.0}
