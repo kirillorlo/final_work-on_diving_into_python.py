@@ -1,4 +1,4 @@
-
+code_to_write = '''
 import csv
 import json
 import random
@@ -35,3 +35,22 @@ def generate_csv_file(file_name, rows):
         for i in range(rows):
             row = [random.randint(1, 1000) for _ in range(3)]
             writer.writerow(row)
+'''
+
+with open("__init__.py", "w") as init_file:
+    init_file.write(code_to_write)
+
+
+function_names = [
+    "def save_to_json",
+    "def find_roots",
+    "def generate_csv_file"
+]
+
+for func_name in function_names:
+    if func_name not in code:
+        print(f"Функция {func_name} не найдена в файле __init__.py")
+    else:
+        print(f"Функция {func_name} найдена в файле __init__.py")
+
+        
