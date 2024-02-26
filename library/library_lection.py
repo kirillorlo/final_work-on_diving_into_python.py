@@ -27,10 +27,20 @@ from datetime import time, date, datetime, timedelta
 # one_more_hour = t.replace(t.hour + 1)
 # print(f'{new_dt}\n{one_more_hour}')
 
-dt = datetime(year=2007, month=6, day=15, hour=2, minute=14,
-microsecond=24)
-print(dt)
-print(dt.timestamp())
-print(dt.isoformat())
-print(dt.weekday())
-print(dt.strftime('Дата %d %B %Y. День недели %A. Время %H:%M:%S. Это %W неделя и %j день года.'))
+# dt = datetime(year=2007, month=6, day=15, hour=2, minute=14,
+# microsecond=24)
+# print(dt)
+# print(dt.timestamp())
+# print(dt.isoformat())
+# print(dt.weekday())
+# print(dt.strftime('Дата %d %B %Y. День недели %A. Время %H:%M:%S. Это %W неделя и %j день года.'))
+
+from datetime import datetime, timedelta
+d = datetime.now()
+td = timedelta(hours=1)
+for i in range(24*7):
+    if d.weekday() == 6:
+        break
+    else:
+        d = d + td
+print(i)
