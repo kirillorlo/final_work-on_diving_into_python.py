@@ -95,4 +95,4 @@ print(f"Средний балл: {average_grade}")
 average_test_score = student.get_average_test_score("Математика")
 print(f"Средний результат по тестам по математике: {average_test_score}")
 
-print(student)
+#print(student)
