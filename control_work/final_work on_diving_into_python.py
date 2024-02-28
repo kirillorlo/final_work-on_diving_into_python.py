@@ -47,7 +47,6 @@ class Student:
                 subject = row[0]
                 if subject not in self.subjects:
                     self.subjects[subject] = {'grades': [], 'test_scores': []}
-                    
     def add_grade(self, subject, grade):
         if subject not in self.subjects:
             self.subjects[subject] = {'grades': [], 'test_scores': []}
